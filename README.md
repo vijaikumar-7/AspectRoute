@@ -141,3 +141,25 @@ misled:
 ## Citation
 
 Citation details will be added if the paper is accepted.
+
+---
+
+## Supplementary material
+
+Three items referenced in the paper are held here rather than in the manuscript,
+to keep the submission within the journal's page allowance. See
+[SUPPLEMENTARY.md](SUPPLEMENTARY.md) for:
+
+- **Per-aspect performance** — Coverage-F1, precision, recall and escalation rate
+  for each of the seven aspect categories.
+- **Pipeline architecture figure** — `architecture.png`, with TikZ source in
+  `architecture.tex`.
+- **Annotation protocol** — an executable protocol for constructing the
+  aspect-level benchmark proposed in Section 7, including corpus, schema,
+  procedure and Fleiss' κ target.
+- **LLM prompt template** — the full zero-shot prompt used for all escalated
+  mentions.
+
+## Licence
+
+MIT. See [LICENSE](LICENSE).
