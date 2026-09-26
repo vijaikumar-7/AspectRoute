@@ -1,0 +1,26 @@
+CROSS-BACKBONE COMPARISON (AspectRoute revision)
+====================================================================
+Paired sample of escalated (LLM-routed) items: n = 4000
+Routing decisions are identical across backbones by construction;
+only the classifier applied to escalated items differs.
+
+Backbone A (cached) : gpt-4o-mini-2024-07-18
+Backbone B (new)    : gpt-4o-mini-2024-07-18
+
+Label agreement between backbones : 42.2%
+
+Backbone                    Commit-acc   Coverage    n committed
+gpt-4o-mini-2024-07-18        77.4%         6.6%     265
+gpt-4o-mini-2024-07-18        79.4%        62.8%     2514
+
+Measured tokens/call (backbone B): 132.3 in, 52.2 out
+Projected AspectRoute cost per 1K reviews (57.5% escalation):
+   with gpt-4o-mini-2024-07-18: $0.123
+   with gpt-4o-mini-2024-07-18: $0.123
+
+DECOMPOSITION (no interpretation is asserted)
+  Items where both backbones committed : 235
+  Agreement among those                : 100.0%
+  Coverage difference (B - A)          : +56.2 pts
+  Low overall agreement may reflect abstention differences rather
+  than label disagreement; inspect the committed-agreement figure.

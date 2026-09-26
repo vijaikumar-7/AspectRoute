@@ -1,0 +1,366 @@
+SHAP ATTRIBUTION EXAMPLES (AspectRoute revision)
+======================================================================
+Computed from cached aspect contexts using the local RoBERTa encoder.
+No LLM API calls were made; predictions below are the ones reported
+in the paper (loaded from cache).
+
+----------------------------------------------------------------------
+Example 1  [routing path: VADER]
+  Aspect category : technical
+  Matched keyword : long
+  IMDB label      : negative
+  System output   : positive
+  Context         : Yes it's long and portentous, yes we do have some wonderful clips from the films that, most people interested on the subject, have already seen.
+  Encoder class   : positive
+  Top attributed tokens (token, SHAP value):
+      wonderful            +0.5347
+      some                 +0.0677
+      Yes                  +0.0408
+      .                    -0.0243
+      do                   -0.0221
+      subject              -0.0210
+      already              -0.0165
+      have                 -0.0160
+
+----------------------------------------------------------------------
+Example 2  [routing path: VADER]
+  Aspect category : emotional_impact
+  Matched keyword : feel
+  IMDB label      : positive
+  System output   : positive
+  Context         : basically it's a cool, funny, very satisfying show which encompasses all the aspects of life and gives you a feeling of -if you work hard enough and wait patiently, you'll get what you want even if it wasn't what you intended.
+  Encoder class   : positive
+  Top attributed tokens (token, SHAP value):
+      satisfying           +0.1520
+      cool                 +0.0821
+      funny                +0.0682
+      even                 +0.0369
+      very                 +0.0318
+      bas                  -0.0296
+      ,                    +0.0288
+      a                    +0.0269
+
+----------------------------------------------------------------------
+Example 3  [routing path: VADER]
+  Aspect category : narrative
+  Matched keyword : original
+  IMDB label      : positive
+  System output   : positive
+  Context         : Nice doco Stuie! <br /><br />Even though it didn't work out how you wanted with the original film you have a fantastic piece of work and great viewing.
+  Encoder class   : positive
+  Top attributed tokens (token, SHAP value):
+      Nice                 +0.1628
+      !                    +0.1614
+      fantastic            +0.1446
+      great                +0.1185
+      though               +0.0462
+      Even                 +0.0441
+      work                 -0.0309
+      it                   -0.0252
+
+----------------------------------------------------------------------
+Example 4  [routing path: VADER]
+  Aspect category : emotional_impact
+  Matched keyword : funny
+  IMDB label      : negative
+  System output   : negative
+  Context         : For my total surprise, the film is horrible: the characters are badly constructed; the story tries to be funny, but it is totally silly; the character of Mercedes Ruehl is amazingly stupid for a professor of Princeton.
+  Encoder class   : negative
+  Top attributed tokens (token, SHAP value):
+      horrible             +0.2774
+      stupid               +0.2039
+      badly                +0.0603
+      is                   +0.0434
+      silly                +0.0315
+      constructed          +0.0253
+      are                  +0.0240
+      is                   +0.0211
+
+----------------------------------------------------------------------
+Example 5  [routing path: VADER]
+  Aspect category : cultural_relevance
+  Matched keyword : political
+  IMDB label      : positive
+  System output   : positive
+  Context         : Most of this political thriller presented as a mostly run of the mill movie with a somewhat better development of many of the major characters, that was much appreciated, until the BIG twist and powerful climax that recalled twists experienced in "Silence of the Lambs," or "The Sixth Sense.
+  Encoder class   : positive
+  Top attributed tokens (token, SHAP value):
+      appreciated          +0.1830
+      much                 +0.1419
+      powerful             +0.0731
+      better               +0.0538
+      was                  +0.0469
+      political            -0.0315
+      thriller             -0.0261
+      somewhat             +0.0254
+
+----------------------------------------------------------------------
+Example 6  [routing path: VADER]
+  Aspect category : visual
+  Matched keyword : stunning
+  IMDB label      : positive
+  System output   : positive
+  Context         : Unfortunately, we lovers of "Lost" can see the lack of respect the producers of this stunning series have with the fans.
+  Encoder class   : negative
+  Top attributed tokens (token, SHAP value):
+      Unfortunately        +0.2759
+      lack                 +0.2292
+      respect              +0.1159
+      stunning             -0.0745
+      the                  +0.0721
+      producers            +0.0414
+      the                  +0.0285
+      this                 +0.0223
+
+----------------------------------------------------------------------
+Example 7  [routing path: VADER]
+  Aspect category : visual
+  Matched keyword : scene
+  IMDB label      : positive
+  System output   : negative
+  Context         : the way that each character left the scene was very sad and you will probably feel tears in your eyes.
+  Encoder class   : negative
+  Top attributed tokens (token, SHAP value):
+      sad                  +0.4827
+      left                 +0.1016
+      tears                +0.0682
+      very                 +0.0498
+      feel                 +0.0433
+      each                 -0.0359
+      .                    +0.0270
+      will                 +0.0242
+
+----------------------------------------------------------------------
+Example 8  [routing path: VADER]
+  Aspect category : performance
+  Matched keyword : acting
+  IMDB label      : positive
+  System output   : positive
+  Context         : Drury's acting is top notch as it always is and he blends well with the other actors in the movie.
+  Encoder class   : positive
+  Top attributed tokens (token, SHAP value):
+      well                 +0.0881
+      blends               +0.0843
+      always               +0.0827
+      top                  +0.0806
+      he                   +0.0550
+      is                   +0.0532
+      notch                +0.0420
+      other                -0.0310
+
+----------------------------------------------------------------------
+Example 9  [routing path: VADER]
+  Aspect category : narrative
+  Matched keyword : twist
+  IMDB label      : positive
+  System output   : positive
+  Context         : I would like to say that I absolutely loved Campfire Tales! To me, it was one of the original horror flicks with a twisted ending.
+  Encoder class   : positive
+  Top attributed tokens (token, SHAP value):
+      loved                +0.3028
+      !                    +0.1577
+      absolutely           +0.1069
+      twisted              -0.0733
+      a                    -0.0532
+      ending               -0.0347
+      say                  +0.0309
+      one                  +0.0273
+
+----------------------------------------------------------------------
+Example 10  [routing path: VADER]
+  Aspect category : performance
+  Matched keyword : acting
+  IMDB label      : negative
+  System output   : negative
+  Context         : <br /><br />While the acting in this movie was worse than most Chuch Norris films, I was hoping to see at least one fight scene.
+  Encoder class   : negative
+  Top attributed tokens (token, SHAP value):
+      worse                +0.4202
+      than                 +0.0543
+      While                -0.0465
+      was                  +0.0455
+      acting               +0.0390
+      movie                +0.0361
+      the                  +0.0322
+      .                    +0.0300
+
+----------------------------------------------------------------------
+Example 11  [routing path: LLM]
+  Aspect category : cultural_relevance
+  Matched keyword : meaningful
+  IMDB label      : negative
+  System output   : negative
+  Context         : But then, it's true, I'm not too big into deep meaningfulness.
+  Encoder class   : neutral
+  Top attributed tokens (token, SHAP value):
+      not                  +0.1000
+      deep                 -0.0593
+      then                 +0.0567
+      meaningful           -0.0546
+      into                 +0.0483
+      too                  +0.0452
+      big                  -0.0373
+      ness                 -0.0221
+
+----------------------------------------------------------------------
+Example 12  [routing path: LLM]
+  Aspect category : narrative
+  Matched keyword : story
+  IMDB label      : positive
+  System output   : negative
+  Context         : Also no zillion dollar special effects were added to try to misdirect viewers from a poorly written storyline.
+  Encoder class   : negative
+  Top attributed tokens (token, SHAP value):
+      poorly               +0.3449
+      mis                  +0.0890
+      written              +0.0619
+      storyline            +0.0393
+      to                   +0.0348
+      direct               +0.0329
+      effects              +0.0268
+      a                    +0.0237
+
+----------------------------------------------------------------------
+Example 13  [routing path: LLM]
+  Aspect category : emotional_impact
+  Matched keyword : hilarious
+  IMDB label      : negative
+  System output   : negative
+  Context         : Saying that, only watch this film if you are a teenage lad aged between 14 to 17 and you find dick jokes hilarious.
+  Encoder class   : negative
+  Top attributed tokens (token, SHAP value):
+      find                 +0.0614
+      only                 +0.0541
+      watch                +0.0534
+      dick                 +0.0506
+      jokes                +0.0488
+      aying                -0.0446
+      you                  +0.0340
+      .                    +0.0333
+
+----------------------------------------------------------------------
+Example 14  [routing path: LLM]
+  Aspect category : emotional_impact
+  Matched keyword : emotion
+  IMDB label      : positive
+  System output   : negative
+  Context         : There was lack of continuity and lack of passion/emotion in the acting.
+  Encoder class   : negative
+  Top attributed tokens (token, SHAP value):
+      lack                 +0.1861
+      lack                 +0.1378
+      of                   +0.0653
+      was                  +0.0567
+      of                   +0.0532
+      passion              +0.0434
+      and                  +0.0417
+      There                +0.0377
+
+----------------------------------------------------------------------
+Example 15  [routing path: LLM]
+  Aspect category : cultural_relevance
+  Matched keyword : culture
+  IMDB label      : negative
+  System output   : negative
+  Context         : But as a TV host of a travel show whose purpose is to show the viewer the beauty of other places and cultures, Bourdain is a miserable, abject, hopeless, grim and depressing failure.
+  Encoder class   : negative
+  Top attributed tokens (token, SHAP value):
+      miserable            +0.2638
+      depressing           +0.0879
+      hopeless             +0.0645
+      failure              +0.0640
+      is                   +0.0426
+      a                    +0.0406
+      .                    +0.0366
+      ,                    +0.0240
+
+----------------------------------------------------------------------
+Example 16  [routing path: LLM]
+  Aspect category : emotional_impact
+  Matched keyword : feel
+  IMDB label      : positive
+  System output   : negative
+  Context         : <br /><br />My initial feelings towards the film is that it's not particularly gripping at times, especially early on, but at least a good dose of comedy is put in, in the form of surfing fanatic Col.
+  Encoder class   : negative
+  Top attributed tokens (token, SHAP value):
+      not                  +0.1042
+      but                  -0.0619
+      particularly         +0.0454
+      My                   +0.0401
+      gripping             +0.0323
+      's                   +0.0311
+      especially           +0.0286
+      is                   +0.0227
+
+----------------------------------------------------------------------
+Example 17  [routing path: LLM]
+  Aspect category : performance
+  Matched keyword : convincing
+  IMDB label      : negative
+  System output   : negative
+  Context         : none of it convincing (or interesting) for even one minute.
+  Encoder class   : negative
+  Top attributed tokens (token, SHAP value):
+      none                 +0.3502
+      of                   +0.0907
+      even                 +0.0862
+      .                    +0.0627
+      it                   +0.0525
+      interesting          +0.0404
+      or                   +0.0252
+      for                  +0.0205
+
+----------------------------------------------------------------------
+Example 18  [routing path: LLM]
+  Aspect category : emotional_impact
+  Matched keyword : emotion
+  IMDB label      : positive
+  System output   : positive
+  Context         : He acts with such emotion, yearning to fit in and sadness/happiness, that really sees him win over the whole entire film.
+  Encoder class   : positive
+  Top attributed tokens (token, SHAP value):
+      win                  +0.1955
+      really               +0.1298
+      fit                  -0.0972
+      film                 +0.0870
+      to                   -0.0861
+      sadness              -0.0835
+      appiness             +0.0589
+      such                 +0.0517
+
+----------------------------------------------------------------------
+Example 19  [routing path: LLM]
+  Aspect category : technical
+  Matched keyword : quality
+  IMDB label      : negative
+  System output   : negative
+  Context         : In fact, the variation in quality of Lost has been so inconsistent, I find myself often wondering how many writers they are using.
+  Encoder class   : negative
+  Top attributed tokens (token, SHAP value):
+      inconsistent         +0.2748
+      so                   +0.1373
+      quality              +0.0638
+      Lost                 +0.0587
+      been                 +0.0369
+      has                  +0.0360
+      using                +0.0359
+      find                 +0.0314
+
+----------------------------------------------------------------------
+Example 20  [routing path: LLM]
+  Aspect category : emotional_impact
+  Matched keyword : emotion
+  IMDB label      : negative
+  System output   : negative
+  Context         : From the beginning of the film to the end, I got no depth of emotion from Mateo.
+  Encoder class   : negative
+  Top attributed tokens (token, SHAP value):
+      no                   +0.4048
+      depth                +0.1378
+      got                  +0.1111
+      From                 +0.0276
+      .                    +0.0211
+      emotion              +0.0207
+      film                 +0.0181
+      the                  +0.0178
+

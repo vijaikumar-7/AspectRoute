@@ -1,0 +1,19 @@
+# SUPERSEDED: output of the original run, which contained the error-handling fault described in README.md. Corrected figures are in corrected_results.txt.
+
+INTER-ASPECT SENTIMENT DIVERGENCE (IASD)
+======================================================================
+Multi-aspect reviews:    9486
+Divergent reviews:       266
+IASD rate:               2.8%
+
+Top divergence patterns:
+  +performance / -narrative: 58
+  +emotional_impact / -narrative: 52
+  +visual / -narrative: 52
+  +emotional_impact / -performance: 48
+  +performance / -emotional_impact: 43
+  +visual / -performance: 37
+  +narrative / -performance: 37
+  +performance / -technical: 35
+  +visual / -emotional_impact: 34
+  +technical / -narrative: 33

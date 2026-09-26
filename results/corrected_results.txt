@@ -1,0 +1,81 @@
+============================================================================================
+ASPECTROUTE - CORRECTED RESULTS (regenerated from clean predictions)
+============================================================================================
+Aspect mentions: 41,315   Reviews: 9,916   Escalated: 23,763 (57.5%)
+
+0. CONTAMINATION EVIDENCE (why results were regenerated)
+--------------------------------------------------------------------------------------------
+  Commit rate on escalated items, original cached run :   6.7%
+  Commit rate on escalated items, regenerated run     :  62.2%
+  Agreement where both runs committed                 :  99.7%  (n=1460)
+  Same model, same prompt, same items. Perfect agreement on committed
+  labels indicates the difference is failed calls silently stored as
+  'neutral', not a change in model behaviour.
+
+1. OVERALL RESULTS
+--------------------------------------------------------------------------------------------
+Configuration                     Cov-F1  95% CI            Cover%   CommitAcc  BinF1   Cost/1K
+VADER-only                        0.652   [0.645, 0.658]   79.8     65.6       0.629   $0.000
+Twitter-RoBERTa (zero-shot)       0.771   [0.764, 0.777]   74.6     77.1       0.683   $0.000
+AspectRoute (VADER cheap path)    0.786   [0.780, 0.792]   72.2     78.6       0.689   $0.123
+AspectRoute (RoBERTa cheap path)  0.823   [0.818, 0.828]   74.4     82.4       0.717   $0.123
+LLM-all                           0.826   [0.820, 0.831]   67.0     82.8       0.677   $0.213
+  CIs use review-level bootstrap (whole reviews resampled).
+
+2. PAIRED SIGNIFICANCE (McNemar, items where both systems commit)
+--------------------------------------------------------------------------------------------
+  RoBERTa-cheap vs LLM-all                           n=27377  b=135   c=257   p=9.87e-10  significant
+  RoBERTa-cheap vs Twitter-RoBERTa (zero-shot)       n=26261  b=1081  c=417   p=8.86e-66  significant
+  RoBERTa-cheap vs AspectRoute (VADER cheap path)    n=29166  b=1034  c=166   p=3.02e-138  significant
+  b = headline correct & other wrong; c = the reverse.
+
+3. PER-ASPECT PERFORMANCE (headline configuration)
+--------------------------------------------------------------------------------------------
+Aspect                Cov-F1   Prec     Rec      %LLM    N
+Narrative             0.830    0.840    0.825    57      7,498
+Performance           0.846    0.846    0.848    52      8,056
+Visual                0.795    0.795    0.796    58      6,796
+Audio                 0.808    0.811    0.807    59      3,563
+Emotional Impact      0.818    0.819    0.818    55      6,866
+Cultural Relevance    0.810    0.811    0.813    70      2,871
+Technical             0.827    0.831    0.825    60      5,665
+  N-weighted mean 0.822 vs pooled 0.823 (macro-F1 is nonlinear, so these need not match exactly)
+
+4. INTER-ASPECT SENTIMENT DIVERGENCE
+--------------------------------------------------------------------------------------------
+  Multi-aspect reviews: 9,486   Divergent: 3,066   IASD = 32.3%
+    +performance          / -narrative              587  (19.1% of divergent)
+    +visual               / -narrative              580  (18.9% of divergent)
+    +performance          / -emotional_impact       525  (17.1% of divergent)
+    +visual               / -emotional_impact       488  (15.9% of divergent)
+    +emotional_impact     / -narrative              465  (15.2% of divergent)
+
+5. THRESHOLD SENSITIVITY (headline configuration)
+--------------------------------------------------------------------------------------------
+tau     Cov-F1    Coverage%   %LLM     Cost/1K
+0.70    0.804     76.3        33.6     $0.072
+0.75    0.811     76.0        40.6     $0.087
+0.80    0.817     75.4        48.4     $0.103
+0.85    0.823     74.4        57.5     $0.123
+  Exact, not interpolated: every item escalated at tau <= 0.85 has a
+  regenerated LLM prediction. tau > 0.85 would require further calls.
+
+6. ABLATIONS
+--------------------------------------------------------------------------------------------
+Configuration                               Cov-F1    Delta
+AspectRoute (RoBERTa cheap path, full)      0.823     --
+A2: random routing at same 57.5% split      0.774     -0.049
+A4: no LLM (RoBERTa only)                   0.771     -0.053
+A4b: no LLM (VADER only)                    0.652     -0.172
+A5: LLM-all (measured, not a proxy)         0.826     +0.002
+VADER cheap path variant                    0.786     -0.037
+  A1 (no domain lexicon) and A3 (no aspect windowing) require
+  re-extraction rather than re-prediction and are not recomputable here.
+
+7. ROUTING SIGNAL DECOMPOSITION
+--------------------------------------------------------------------------------------------
+  Sarcasm patterns match 1,538 of 41,315 contexts (3.7%)
+    low confidence only      : 22,225 (93.5% of escalations)
+    both triggers            :    993 ( 4.2%)
+    sarcasm pattern only     :    545 ( 2.3%)
+  Patterns that never matched (5 of 20): oh great, wow just wow, thanks for nothing, never seen that before, how creative

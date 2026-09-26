@@ -1,0 +1,13 @@
+# SUPERSEDED: output of the original run, which contained the error-handling fault described in README.md. Corrected figures are in corrected_results.txt.
+
+ROUTING EFFICIENCY ANALYSIS
+======================================================================
+Total aspect-sentiment pairs: 41315
+VADER-routed: 17552 (42.5%)
+LLM-routed:   23763 (57.5%)
+
+Estimated cost comparison (per 1000 reviews):
+  VADER-only:       $0.00
+  LLM-all:          ~$4.72  (all routed to API)
+  AspectStreamSA:   ~$2.71  (57.5% routed to API)
+  Cost reduction:   42.5%

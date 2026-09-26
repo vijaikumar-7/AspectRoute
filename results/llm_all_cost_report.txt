@@ -1,0 +1,22 @@
+MEASURED LLM COST REPORT (AspectRoute revision)
+==================================================================
+Model: gpt-4o-mini-2024-07-18
+Pricing used: $0.15/1M input, $0.6/1M output
+
+Calls made in this completion run : 17552
+  measured input tokens           : 2,199,230
+  measured output tokens          : 883,828
+  measured cost of this run       : $0.86
+  mean tokens/call                : 125.3 in, 50.4 out
+  items still missing a prediction: 0
+
+Projected using MEASURED per-call token averages:
+  reviews in sample               : 9916
+  aspect mentions                 : 41315
+  LLM-all (100% escalation)       : $2.02  ($0.20 per 1K reviews)
+  AspectRoute (57.5% escalation)  : $1.16  ($0.12 per 1K reviews)
+  relative cost reduction         : 42.5%
+
+NOTE: the relative reduction is unchanged from the submitted manuscript
+(it is a routing ratio). The absolute per-1K-review figures above are
+measured and should replace the previously reported constants.
